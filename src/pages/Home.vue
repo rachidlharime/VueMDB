@@ -14,7 +14,7 @@
                 </h5>
 
                 <p class="text-center">
-                    <b-link href="http://www.omdbapi.com" target="_blank" >
+                    <b-link href="https://github.com/rachidlharime/vuemdb" target="_blank" >
                         <b-icon-github></b-icon-github>
                         Code
                     </b-link>
