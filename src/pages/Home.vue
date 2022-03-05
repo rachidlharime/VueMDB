@@ -73,7 +73,7 @@ export default {
             loading: true,
             errored: false,
             errorText: "",
-            apikey: "e13fed6c",
+            apikey: process.env.VUE_APP_API_KEY,
             movies: null
         }
     },
@@ -83,7 +83,7 @@ export default {
             else { return false }
         },
         buildUrl () {
-            return 'http://www.omdbapi.com/?s='+this.searchText+'&type=movie&apikey='+this.apikey
+            return `http://www.omdbapi.com/?s=${this.searchText}&type=movie&apikey=${this.apikey}`
         },
         respEmpty () {
             if(this.movies == undefined) { return true }

@@ -42,14 +42,14 @@ export default {
             loading: true,
             errored: false,
             errorText: "",
-            apikey: "e13fed6c",
+            apikey: process.env.VUE_APP_API_KEY,
             id: this.$route.params.id,
             movie: null
         }
     },
     computed: {
         buildUrl () {
-            return 'http://www.omdbapi.com/?i='+this.id+'&plot=short&apikey='+this.apikey
+            return `http://www.omdbapi.com/?i=${this.id}&plot=short&apikey=${this.apikey}`
         }
     },
     mounted() {
